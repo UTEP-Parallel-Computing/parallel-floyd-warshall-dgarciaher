@@ -41,3 +41,18 @@ if comm.Get_rank() is 0:
 else:
     for k in range(start_row,end_row):
         comm.send(matrix[k], dest = 0, tag = k)
+
+
+print("\n")
+print("------------subarray-------------")
+for row in range(1, 10):
+        for col in range(1, 10):
+            print("{" , matrix[row][col] , "}" , end="")
+        print("")
+
+print("\n")
+print("------------expected output-------------")      
+for row in range(1, 10):
+        for col in range(1, 10):
+            print("{" , expected_output[row][col] , "}" , end="")
+        print("")
